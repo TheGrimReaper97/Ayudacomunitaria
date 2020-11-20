@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnregresar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,19 +46,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(212, 124);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(478, 125);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Carlos Levi Gálvez Rivera-GR201728\nDavid Baltazar García Rodezno-GR181314\nRodrigo" +
-    " Jossue Rodríguez Meléndez-RM192037\nGerson Ernesto López Chévez-LC151886\nKarla E" +
-    "lizabeth Murillo Urrutia MU192557";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -82,43 +67,35 @@
             this.btnregresar.UseVisualStyleBackColor = true;
             this.btnregresar.Click += new System.EventHandler(this.btnregresar_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(244, 145);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(281, 26);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Karla Elizabeth Murillo Urrutia";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(401, 158);
+            this.label3.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(244, 229);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 13);
-            this.label3.TabIndex = 4;
+            this.label3.Size = new System.Drawing.Size(328, 26);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Rodrigo Jossue Melendez Rodriguez";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(356, 282);
+            this.label4.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(244, 310);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Asignatura";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(179, 321);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(490, 25);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Programación Orientada a Objetos POO104 G03T";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 404);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(455, 25);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "todos los derechos reservados copyright 2020";
+            this.label4.Size = new System.Drawing.Size(147, 26);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Ernesto Chevez";
             // 
             // Sobre_Nosotros
             // 
@@ -126,16 +103,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(779, 441);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnregresar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Sobre_Nosotros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sobre_Nosotros";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -146,12 +122,10 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnregresar;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
     }
 }

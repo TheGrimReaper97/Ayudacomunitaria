@@ -70,6 +70,14 @@
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
+    <Compile Include="MenuBienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuBienvenida.Designer.cs">
+      <DependentUpon>MenuBienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Personas.cs" />
+    <Compile Include="Productos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sobre Nosotros.cs">
@@ -89,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuBienvenida.resx">
+      <DependentUpon>MenuBienvenida.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

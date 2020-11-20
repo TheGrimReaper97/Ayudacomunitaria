@@ -15,17 +15,13 @@ namespace Proyecto_Ayuda_Comunitaria
     {
         Conexion c = new Conexion();
        
-
-
-     
+                   
 
         public Form4()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();                    
           
-           
+         
         }
 
         private void btnsalirpr_Click(object sender, EventArgs e)
@@ -53,6 +49,31 @@ namespace Proyecto_Ayuda_Comunitaria
         private void Form4_Load(object sender, EventArgs e)
         {
             c.cargarProductos(dataGridView1);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtidproducto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtnombreproducto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
