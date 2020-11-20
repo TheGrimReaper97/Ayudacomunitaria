@@ -36,5 +36,49 @@ namespace Proyecto_Ayuda_Comunitaria
         {
 
         }
+
+        //CODIGO PARA MOVER VENTANA--------------------------------------
+        int posY = 0;
+        int posX = 0;
+        private void panel3_MouseMove(object sender, MouseEventArgs e)
+        {
+            if(e.Button != MouseButtons.Left)
+            {
+                posX = e.X;
+                posY = e.Y;
+            }
+            else
+            {
+                Left = Left + (e.X - posX);
+                Top = Top + (e.Y - posY);
+            }
+        }
+        //---------------------------------------------------------------------
+
+
+
+        private void txtusurio_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtusurio.Clear();
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtusurio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtcontraseña_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtcontraseña.Clear();
+        }
     }
+
+
+   
 }
