@@ -14,19 +14,18 @@ namespace Proyecto_Ayuda_Comunitaria
     public partial class Form4 : Form
     {
         Conexion c = new Conexion();
-       
 
 
-     
 
         public Form4()
         {
             InitializeComponent();
-            
-            
-          
-           
         }
+
+        private List<Productos>  Productos = new List<Productos>();
+        private int edit_indice1= -1;
+         
+        
 
         private void btnsalirpr_Click(object sender, EventArgs e)
         {
@@ -35,24 +34,54 @@ namespace Proyecto_Ayuda_Comunitaria
             f2.Show();
         }
 
+        private void actualizargrid1()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = Productos;
+        }
+        private void reseteo()
+        {
+            txtnombreproducto.Clear();
+            txtidproducto.Clear();
+            txtcant.Clear();
+        }
         private void btnregistrarpr_Click(object sender, EventArgs e)
         {
-             if(c.productosregistrado(Convert.ToInt32(txtidproducto.Text))==0)
+            if (c.productoregistrado(Convert.ToInt32(txtidproducto.Text))== 0)
             {
+                Productos producto = new Productos();
+                producto.Producto  = txtnombreproducto.Text;
+                producto.IdProducto = Int32.Parse(txtidproducto.Text);
+                producto.Cantidad = Int32.Parse(txtcant.Text);
                 
-                MessageBox.Show(c.insertarproductos(txtnombreproducto.Text, Convert.ToInt32(txtidproducto.Text), Convert.ToInt32(txtnUP2.Text)));
-                c.cargarProductos(dataGridView1);
 
+                if (edit_indice1 > -1)
+                {
+                    Productos[edit_indice1] = producto;
+                    edit_indice1 = -1;
+                }
+                else
+                {
+                    Productos.Add(producto);
+                }
+                actualizargrid1();
+                reseteo();
+                MessageBox.Show("Se inserto");
             }
-             else
+            else
             {
-                MessageBox.Show("Imposible de registrar, El registro ya existe");
+                MessageBox.Show("El regsitro ya existe");
             }
+
+
+            
         }
 
         private void Form4_Load(object sender, EventArgs e)
         {
             c.cargarProductos(dataGridView1);
         }
+
+      
     }
 }

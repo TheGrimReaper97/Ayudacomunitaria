@@ -10,26 +10,25 @@ using System.Windows.Forms;
 
 namespace Proyecto_Ayuda_Comunitaria
 {
-    public partial class Sobre_Nosotros : Form
+    public partial class MenuBienvenida : Form
     {
-        public Sobre_Nosotros()
+        public MenuBienvenida()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void fechahora_Tick(object sender, EventArgs e)
+        {
+            lblhora.Text = DateTime.Now.ToString("h:mm:ss");
+            lblfecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void lblhora_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnregresar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form2 f2 = new Form2();
-            f2.Show();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
+        private void MenuBienvenida_Load(object sender, EventArgs e)
         {
 
         }

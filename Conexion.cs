@@ -41,6 +41,28 @@ namespace Proyecto_Ayuda_Comunitaria
 
         }
 
+
+        public string registrarusuarios(string Nombrep, int id, int cantidad)
+        {
+
+            string salida = "Se registro";
+
+            try
+            {
+                cmd = new SqlCommand("Insert into Usuarios(Nombre_Producto,ID_Producto,Cantidad_Producto) values('" + Nombrep + "','" + id + "'," + cantidad + " )", cn);
+                cmd.ExecuteNonQuery();
+            }
+
+            catch (Exception ex)
+            {
+                salida = " No se conecto: " + ex.ToString();
+            }
+
+            return salida;
+
+        }
+        
+
         public string insertarproductos(string Nombrep, int id, int cantidad)
         {
 
@@ -61,7 +83,7 @@ namespace Proyecto_Ayuda_Comunitaria
         
         }
 
-        public int productosregistrado(int id)
+        public Int32 productoregistrado( Int32 id)
         {
 
             int contador = 0;
@@ -85,6 +107,7 @@ namespace Proyecto_Ayuda_Comunitaria
             return contador;
 
         }
+        
 
         public void cargarProductos(DataGridView dgv)
         {
@@ -97,6 +120,73 @@ namespace Proyecto_Ayuda_Comunitaria
 
             }
             catch(Exception ex)
+            {
+
+                MessageBox.Show("No se pudo llenar el DataGridView: " + ex.ToString());
+            }
+        }
+
+        
+
+        public string insertarpersona(string Nombreper,  string Apellidoper, decimal Casap , Int32 idp, int integrantes , DateTime  fecha )
+        {
+
+            string salida;
+
+            try
+            {
+                cmd = new SqlCommand("Insert into Personas(Nombre_Persona, Apellido_Persona ,Casa_Perso , ID_Persona,Integrantes_Persona, Fecha_Persona) values('" + Nombreper + "','" + Apellidoper + "','" + Casap  + "', '" + idp +  "','" + integrantes + "' , " + fecha + " ) ", cn);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se Inserto");
+                salida =  "Se inserto";
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se inserto");
+                 salida = " No se conecto: " + ex.ToString();
+            }
+
+            return salida;
+
+        }
+
+        public int personaregistrada(int idp)
+        {
+
+            int contador = 0;
+
+            try
+            {
+                cmd = new SqlCommand("Select * from Personas where ID_Persona=" + idp + " ", cn);
+                dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    contador++;
+                }
+                dr.Close();
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se puedo consultar bien: " + ex.ToString());
+            }
+
+            return contador;
+
+        }
+
+        public void cargarPersona(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("Select * from Personas", cn);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+
+            }
+            catch (Exception ex)
             {
 
                 MessageBox.Show("No se pudo llenar el DataGridView: " + ex.ToString());
